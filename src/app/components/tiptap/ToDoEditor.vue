@@ -80,6 +80,25 @@ const editor = useEditor({
       toDosStore.updateToDoContent(props.todoId, html)
     }
   },
+  onSelectionUpdate: ({ editor }) => {
+    // Проверяем, что это не десктоп и есть выделенный текст
+    if (!isDesktop.value && !editor.state.selection.empty) {
+      const { view } = editor
+      
+      // Хак для iOS: временно убираем возможность редактирования, чтобы скрыть клавиатуру
+      view.dom.setAttribute('contenteditable', 'false')
+      
+      // Снимаем фокус
+      if (view.dom instanceof HTMLElement) {
+        view.dom.blur()
+      }
+
+      // Возвращаем возможность редактирования обратно
+      setTimeout(() => {
+        view.dom.setAttribute('contenteditable', 'true')
+      }, 100)
+    }
+  },
 })
 
 // Watch for content changes from outside

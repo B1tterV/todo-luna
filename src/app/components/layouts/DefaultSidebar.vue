@@ -256,7 +256,7 @@ const openMenu = (event: MouseEvent, sidebarItem: SidebarGroupItem | DraggableSi
   } else {
     currentAnchorEl.value = itemNamesRef.value[index]!
     currentSidebarItem.value = sidebarItem as SidebarGroupItem
-    registerMenu(menuId) // Это закроет любое другое открытое меню в приложении
+    registerMenu(menuId)
   }
 }
 

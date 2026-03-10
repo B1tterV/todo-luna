@@ -1,6 +1,6 @@
 # 🌙 Todo Luna
 
-Современное полнофункциональное приложение для управления задачами, созданное на **Nuxt 3** и **IndexedDB** для автономного хранения данных.
+Современное полнофункциональное приложение для управления задачами, созданное на **Nuxt 4** и **IndexedDB** для автономного хранения данных.
 
 ![Nuxt](https://img.shields.io/badge/Nuxt-3.x-00DC82?style=flat-square&logo=nuxt.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript)
@@ -25,7 +25,7 @@
 
 | Категория | Технология |
 |----------|------------|
-| **Фреймворк** | Nuxt 3 |
+| **Фреймворк** | Nuxt 4 |
 | **Язык** | TypeScript |
 | **Управление состоянием** | Pinia |
 | **База данных** | IndexedDB (Dexie) |

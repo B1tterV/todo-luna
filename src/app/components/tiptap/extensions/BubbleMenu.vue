@@ -17,19 +17,12 @@ const props = defineProps<{
 }>()
 
 const bubbleOptions = {
-  duration: [150, 150],
   placement: 'top-start',
   offset: {mainAxis: 10 },
-  popperOptions: {
-    modifiers: [
-      { name: 'preventOverflow', options: { boundary: 'viewport', padding: 8 } },
-      { name: 'flip', options: { fallbackPlacements: ['top', 'bottom'] } },
-    ],
-  },
   onHide: () => {
     isDropdownOpen.value = false
   },
-}
+} as const
 
 // Хелпер теперь возвращает только базовые данные
 const cmd = (name: string, method?: string) => ({
