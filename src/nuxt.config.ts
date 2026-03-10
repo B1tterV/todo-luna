@@ -82,7 +82,7 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
       ],
     },
-    baseURL: '/',
+    baseURL: '/todo-luna/',
   },
 
   build: {
