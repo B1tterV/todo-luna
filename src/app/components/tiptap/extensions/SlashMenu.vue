@@ -45,6 +45,34 @@ defineExpose({ onKeyDown })
   </div>
 </template>
 
+<style lang="scss">
+.slash-menu-root {
+  @media (max-width: $breakpoint-xs) {
+    position: fixed !important;
+    top: 42px !important; /* Убедитесь, что это значение вам подходит */
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    /* Важно для Tippy/Popper: затираем инлайновый inset */
+    inset: 0 0 auto 0 !important; 
+    width: 100% !important;
+    z-index: 9999 !important;
+
+    .tippy-box {
+      max-width: 100% !important;
+      width: 100% !important;
+      border-radius: 0 0 20px 20px !important;
+      background: white; /* Настройте под вашу тему */
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      
+      .tippy-content {
+        padding: 0;
+      }
+    }
+  }
+}
+</style>
+
 <style scoped lang="scss">
 .slash-menu {
   background: var(--back-down);
@@ -90,6 +118,15 @@ defineExpose({ onKeyDown })
       width: 20px;
       height: 20px;
     }
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    width: 100% !important;
+    border-radius: 0 0 20px 20px !important;
+    border-bottom: none;
+    // Можно добавить max-height, чтобы меню не перекрывало весь экран
+    max-height: 40vh;
+    overflow-y: auto;
   }
 }
 

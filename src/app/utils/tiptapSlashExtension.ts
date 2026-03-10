@@ -54,6 +54,12 @@ export const slashSuggestion = {
           interactive: true,
           trigger: 'manual',
           placement: 'bottom-start',
+          popperOptions: {
+            strategy: 'fixed',
+          },
+          onCreate(instance) {
+            instance.popper.classList.add('slash-menu-root')
+          },
         })
         
         popup = tippyInstances[0] 

@@ -198,12 +198,12 @@ const selectStyle = (item: SlashMenuItem) => {
 
     @media (max-width: $breakpoint-xs) {
       position: fixed !important;
-      bottom: 42px !important;
-      top: auto;
+      top: 42px !important;
+      bottom: auto;
       left: 0 !important;
       width: 100% !important;
-      border-radius: 20px 20px 0 0 !important;
-      box-shadow: none;
+      border-radius: 0 0 20px 20px !important;
+      // box-shadow: none;
       border-bottom: none;
     }
   }
@@ -258,19 +258,21 @@ const selectStyle = (item: SlashMenuItem) => {
   @media (max-width: $breakpoint-xs) {
     display: flex;
     position: fixed !important;
-    bottom: 0 !important;
+    top: 0 !important;
     left: 0 !important;
-    top: auto !important;
+    bottom: auto !important;
     width: 100%;
     background: var(--back-down);
     border-top: 1px solid var(--line);
     transform: none !important;
-    border-radius: 6px 6px 0 0;
+    border-radius: 0px 0px 6px 6px;
     z-index: 100;
     justify-content: space-around;
 
     &:has(.style-selector.is-active) {
       border-radius: 0;
+      border-bottom: none;
+      box-shadow: none;
     }
   }
 }
