@@ -1,0 +1,7 @@
+src/node_modules
+src/.nuxt
+src/.output
+src/dist
+src/.yarn
+.DS_Store
+README.md

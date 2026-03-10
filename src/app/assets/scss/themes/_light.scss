@@ -1,0 +1,26 @@
+@use "../colors-variables.scss" as *;
+
+:root {
+    --blue-logo: #{$light-blue-logo};
+    --menu-back: #{$light-menu-back};
+    --menu-back-reverse: #{$light-menu-back-reverse};
+    --dark-back: #{$light-dark-back};
+    --text-main: #{$light-text-main};
+    --gray-text: #{$light-gray-text};
+    --blue-main: #{$light-blue-main};
+    --blue-main-hover: #{$light-blue-main-hover};
+    --white: #{$light-white};
+    --red: #{$light-red};
+    --red-back: #{$light-red-back};
+    --green: #{$light-green};
+    --green-back: #{$light-green-back};
+    --blue-back: #{$light-blue-back};
+    --gray: #{$light-gray};
+    --scrollbar: #{$light-scrollbar};
+    --back-down: #{$light-back-down};
+    --icon: #{$light-icon};
+    --active-icon: #{$light-active-icon};
+    --placeholder: #{$light-placeholder};
+    --table-header: #{$light-table-header};
+    --line: #{$light-line};
+}

@@ -1,0 +1,96 @@
+// Имя: NoirPro - NP
+// Размер: p = percent (Например 160p = 160%) иначе px
+// Добавляем U если upercase
+// Добавляем LS если letter-spacing
+// Структура: NAME-SIZE-WEIGHT-HEIGHT-(Если требуется)-LS-(Если требуется)-U(Если требуется)
+// Обязательно добавляем в порядке понижения font-size для быстрого поиска
+
+@mixin NP-48-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 48px;
+}
+
+@mixin NP-30-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 30px;
+}
+
+@mixin NP-28-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 28px;
+}
+
+@mixin NP-24-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 24px;
+}
+
+@mixin NP-20-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 20px;
+}
+
+@mixin NP-18-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@mixin NP-16-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@mixin NP-16-400 {
+    font-family: "NoirPro";
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@mixin NP-16-300 {
+    font-family: "NoirPro";
+    font-weight: 300;
+    font-size: 16px;
+}
+
+@mixin NP-14-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 14px;
+}
+
+@mixin NP-14-400 {
+    font-family: "NoirPro";
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@mixin NP-14-300 {
+    font-family: "NoirPro";
+    font-weight: 300;
+    font-size: 14px;
+}
+
+@mixin NP-12-500 {
+    font-family: "NoirPro";
+    font-weight: 500;
+    font-size: 12px;
+}
+
+@mixin NP-12-400 {
+    font-family: "NoirPro";
+    font-weight: 400;
+    font-size: 12px;
+}
+
+@mixin NP-12-300 {
+    font-family: "NoirPro";
+    font-weight: 300;
+    font-size: 12px;
+}

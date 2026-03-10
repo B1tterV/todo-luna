@@ -1,0 +1,26 @@
+@use "../colors-variables.scss" as *;
+
+:root.dark {
+    --blue-logo: #{$dark-blue-logo};
+    --menu-back: #{$dark-menu-back};
+    --menu-back-reverse: #{$dark-menu-back-reverse};
+    --dark-back: #{$dark-dark-back};
+    --text-main: #{$dark-text-main};
+    --gray-text: #{$dark-gray-text};
+    --blue-main: #{$dark-blue-main};
+    --blue-main-hover: #{$dark-blue-main-hover};
+    --white: #{$dark-white}; 
+    --red: #{$dark-red};
+    --red-back: #{$dark-red-back};
+    --green: #{$dark-green};
+    --green-back: #{$dark-green-back};
+    --blue-back: #{$dark-blue-back}; 
+    --gray: #{$dark-gray};
+    --scrollbar: #{$dark-scrollbar};
+    --back-down: #{$dark-back-down};
+    --icon: #{$dark-icon};
+    --active-icon: #{$dark-active-icon};
+    --placeholder: #{$dark-placeholder};
+    --table-header: #{$dark-table-header};
+    --line: #{$dark-line};
+}

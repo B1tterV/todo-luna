@@ -1,0 +1,20 @@
+.toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    transition: scale 0.3s ease-out, transform 0.3s ease-out;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease-out;
+    }
+
+    &:hover {
+        scale: 1.1;
+    }
+}

@@ -1,0 +1,76 @@
+@use "../colors-variables.scss" as *;
+@use "./breakpoints.scss" as *;
+
+@mixin scroll {
+    -ms-overflow-style: none;
+    @supports (-webkit-appearance: none) {
+        // WebKit (Chrome, Safari, etc.)
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 100px;
+            border-radius: 32px;
+        }
+        &::-webkit-scrollbar:horizontal {
+            height: 4px;
+            width: 100px;
+            border-radius: 32px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: none;
+            border-radius: 32px;
+            margin-right: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            cursor: pointer;
+            background-color: var(--scrollbar);
+            border-radius: 32px;
+            width: 4px;
+            height: 100px;
+            outline: none;
+            &:hover {
+                background: var(--scrollbar);
+            }
+        }
+        &::-webkit-scrollbar-thumb:horizontal {
+            cursor: pointer;
+            background-color: var(--scrollbar);
+            border-radius: 32px;
+            height: 4px;
+            width: 100px;
+            outline: none;
+            &:hover {
+                background: var(--scrollbar);
+            }
+        }
+    }
+
+    @supports (scrollbar-width: thin) and (not (-webkit-appearance: none)) {
+        // Стили для Firefox
+        scrollbar-width: thin;
+        scrollbar-color:var(--scrollbar) var(--scrollbar);
+    }
+}
+
+@mixin no-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10+ и Edge */
+    user-select: none;         /* Chrome, Firefox, Opera, Edge */
+}
+
+@mixin no-scroll {
+    scrollbar-width: none;     /* For Firefox */ 
+    -ms-overflow-style: none;  /* For IE and Edge */
+    &::-webkit-scrollbar {     /* For Chrome, Safari, and Opera */
+        display: none;
+    }
+}
+
+@mixin container-1200-padding {
+    width: 100%;
+    /* Формула: (100% - 1200px) / 2. Если экран меньше 1200, отступ будет 30px */
+    padding-left: max(20px, calc((100% - 1200px) / 2));
+    padding-right: max(20px, calc((100% - 1200px) / 2));
+    box-sizing: border-box;
+}

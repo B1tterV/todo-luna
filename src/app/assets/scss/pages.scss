@@ -1,0 +1,61 @@
+@use 'colors-variables.scss' as *;
+@use 'fonts/typography.scss' as *;
+@use 'base/breakpoints.scss' as *;
+
+.keys-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.key-block {
+    @include NP-12-500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: color-mix(var(--gray-text) 50%, transparent);
+    padding: 4px;
+    color: color-mix($white 90%, transparent);
+    text-transform: uppercase;
+    border: 1px solid var(--line);
+
+    @media (pointer: coarse) and (not (any-pointer: fine)), 
+        (max-width: $breakpoint-xs) {
+        display: none;
+    }
+}
+
+.page-title {
+    @include NP-28-500;
+}
+
+.page-description {
+    @include NP-14-400;
+    color: var(--text-main);
+    opacity: 0.8;
+}
+
+.page-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    height: 100%;
+}
+
+.form-errors {
+    margin-bottom: 5px;
+    color: var(--red);
+    border: 1px dashed var(--red);
+    background: var(--red-back);
+    padding: 10px;
+    border-radius: 10px;
+
+    ul {
+        padding-left: 20px;
+        li {
+        list-style-type: disc;
+        padding: 3px 0;
+        }
+    }
+}
