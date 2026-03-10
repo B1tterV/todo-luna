@@ -215,6 +215,9 @@ const handleTodoClick = () => {
     flex: 1;
     color: var(--text-main);
     transition: all 0.2s;
+    max-width: calc(100% - 60px);
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:hover {
         color: var(--blue-main);
