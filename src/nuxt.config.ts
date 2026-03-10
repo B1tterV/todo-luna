@@ -127,30 +127,30 @@ export default defineNuxtConfig({
         {
           type: 'image/png',
           sizes: '16x16',
-          src: '/favicon/favicon-16x16.png',
+          src: '/todo-luna/favicon/favicon-16x16.png',
         },
         {
           type: 'image/png',
           sizes: '32x32',
-          src: '/favicon/favicon-32x32.png',
+          src: '/todo-luna/favicon/favicon-32x32.png',
         },
         {
           type: 'image/png',
           sizes: '96x96',
-          src: '/favicon/favicon-96x96.png',
+          src: '/todo-luna/favicon/favicon-96x96.png',
         },
         {
           sizes: '192x192',
           type: 'image/png',
-          src: '/favicon/android-icon-192x192.png',
+          src: '/todo-luna/favicon/android-icon-192x192.png',
         },
         {
-          src: '/favicon/ms-icon-310x310.png',
+          src: '/todo-luna/favicon/ms-icon-310x310.png',
           sizes: '310x310',
           type: 'image/png',
         },
         {
-          src: '/favicon/ms-icon-310x310.png',
+          src: '/todo-luna/favicon/ms-icon-310x310.png',
           sizes: '310x310',
           type: 'image/png',
           purpose: 'any maskable',
