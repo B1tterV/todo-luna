@@ -63,7 +63,7 @@ export default defineNuxtConfig({
           rel: 'icon',
           type: 'image/png',
           sizes: '16x16',
-          href: '/favicon/favicon.svg',
+          href: '/favicon/favicon-16x16.png',
         },
         {
           rel: 'icon',
@@ -72,9 +72,15 @@ export default defineNuxtConfig({
           href: '/favicon/favicon-32x32.png',
         },
         {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '96x96',
+          href: '/favicon/favicon-96x96.png',
+        },
+        {
           rel: 'apple-touch-icon',
           sizes: '180x180',
-          href: '/favicon/apple-touch-icon.png',
+          href: '/favicon/apple-icon-180x180.png',
         },
       ],
       meta: [
@@ -104,8 +110,67 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
-    'dayjs-nuxt'
+    'dayjs-nuxt',
+    '@vite-pwa/nuxt'
   ],
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      display: 'standalone',
+      name: 'Todo Luna',
+      short_name: 'Todo Luna',
+      description: 'Чистое пространство для ваших мыслей и задач',
+      theme_color: '#181b1f',
+      background_color: '#181b1f',
+      icons: [
+        {
+          type: 'image/png',
+          sizes: '16x16',
+          src: '/favicon/favicon-16x16.png',
+        },
+        {
+          type: 'image/png',
+          sizes: '32x32',
+          src: '/favicon/favicon-32x32.png',
+        },
+        {
+          type: 'image/png',
+          sizes: '96x96',
+          src: '/favicon/favicon-96x96.png',
+        },
+        {
+          sizes: '192x192',
+          type: 'image/png',
+          src: '/favicon/android-icon-192x192.png',
+        },
+        {
+          src: '/favicon/ms-icon-310x310.png',
+          sizes: '310x310',
+          type: 'image/png',
+        },
+        {
+          src: '/favicon/ms-icon-310x310.png',
+          sizes: '310x310',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
+      scope: '/todo-luna/',
+      start_url: '/todo-luna/'
+    },
+    workbox: {
+      navigateFallback: '/todo-luna/', 
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'], // кеширование ресурсов
+    },
+    client: {
+      installPrompt: true,
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module',
+    },
+  },
 
   viewport: {
     breakpoints: {
